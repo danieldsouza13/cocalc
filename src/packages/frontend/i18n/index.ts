@@ -11,7 +11,6 @@ import {
   MessageFormatElement,
 } from "react-intl";
 
-import { NAMES, OTHER_SETTINGS_LOCALE_KEY } from "@cocalc/util/i18n";
 import { AccountState } from "@cocalc/frontend/account/types";
 import { redux } from "@cocalc/frontend/app-framework";
 import {
@@ -19,14 +18,16 @@ import {
   KEEP_EN_LOCALE,
   Locale,
 } from "@cocalc/util/consts/locale";
+import { NAMES, OTHER_SETTINGS_LOCALE_KEY } from "@cocalc/util/i18n/index";
+import type { IntlMessage } from "@cocalc/util/i18n/types";
+import { isIntlMessage } from "@cocalc/util/i18n/types";
 import { unreachable } from "@cocalc/util/misc";
-import { IntlMessage, isIntlMessage } from "./types";
 
 export { dialogs, editor, jupyter, labels, menu } from "./common";
 
 export { DEFAULT_LOCALE, isIntlMessage, OTHER_SETTINGS_LOCALE_KEY };
 
-export type { IntlMessage, Locale };
+  export type { IntlMessage, Locale };
 
 export type Messages =
   | Record<string, string>
